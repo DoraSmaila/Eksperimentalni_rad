@@ -1,0 +1,14 @@
+Za pokretanje projekta, potrebno je pozicionirati se u projekt i pokretati sljedeće naredbe:
+1) Pokrenuti: docker run -p 8000:8000 api
+2) U web browser unijeti: http://localhost:8000
+
+
+Pokrenuti drugi terminal, te unijeti soljedeće naredbe za mjerenje performansi:
+ab -n 100000 -c 2 http://127.0.0.1:8000/update_single_field/1/
+ab -n 100000 -c 2 http://127.0.0.1:8000/update_all_predmeti_for_profesor/1/
+ab -n 100000 -c 2 http://127.0.0.1:8000/read_profesori/
+ab -n 100000 -c 2 http://127.0.0.1:8000/read_predmeti/
+ab -n 100000 -c 2 http://127.0.0.1:8000/read_profesori_j_string/
+ab -n 100000 -c 2 http://127.0.0.1:8000/read_predmeti_j_string/
+ab -n 100000 -c 2 http://127.0.0.1:8000/read_profesori_j_type/
+ab -n 100000 -c 2 http://127.0.0.1:8000/read_profesori_j_type/
